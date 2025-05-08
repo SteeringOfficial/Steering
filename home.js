@@ -88,6 +88,9 @@ function toggleModal(){
 const video = document.getElementById("vods");
 const progressBar = document.getElementById("progressBar");
 const progressContainer = document.getElementById("progressContainer");
+const muteBtn = document.getElementById("muteBtn");
+const fullscreenBtn = document.getElementById("fullscreenBtn");
+const wrapper = document.querySelector(".video-wrapper");
 
 function togglePlayPause() {
     const button = document.getElementById("playPauseButton");
@@ -114,3 +117,19 @@ function seekVideo(event) {
     video.currentTime = percentage * video.duration;
 }
 
+// Mute / Unmute
+function toggleMute() {
+    video.muted = !video.muted;
+    muteBtn.textContent = video.muted ? "🔇" : "🔊";
+}
+
+// Fullscreen / Exit fullscreen
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      wrapper.requestFullscreen().catch(err => {
+        alert(`Erreur en plein écran : ${err.message}`);
+      });
+    } else {
+      document.exitFullscreen();
+    }
+}

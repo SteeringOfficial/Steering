@@ -21,7 +21,6 @@
         <!--HEAD BAR-->
         <nav id="headbar">
             <a href="home.html"><img id="logo1" src="logo/SteeringWhite.png" alt="logo"></a>
-            <a href="home.html"><img id="logoA1" src="logo/Steering-S-white-1000px-circle.png" alt="logo"></a>
         </nav>
         <br><br><br>
 
@@ -29,11 +28,15 @@
         <!--Montage VOD de Steering-->
         <div id="vod">
             <div class="video-wrapper">
-                <video id="vods" src="ph/STEERING/STEERING-VOD_0.mp4" preload="metadata"></video>
+              <video id="vods" src="ph/STEERING/STEERING-VOD_0.mp4" preload="metadata"></video>
+              <div class="custom-controls">
                 <button id="playPauseButton" onclick="togglePlayPause()">▶</button>
-                <div id="progressContainer" onclick="seekVideo(event)">
-                    <div id="progressBar"></div>
-                </div>
+                <button id="muteBtn" onclick="toggleMute()">🔇</button>
+                <button id="fullscreenBtn" onclick="toggleFullscreen()">⛶</button>
+              </div>
+              <div id="progressContainer" onclick="seekVideo(event)">
+                <div id="progressBar"></div>
+              </div>
             </div>
         </div>
 
