@@ -74,7 +74,16 @@ const slider2 = createSlider(".slides2 img", "displaySlide");
 window.prevSlide2 = slider2.prevSlide;
 window.nextSlide2 = slider2.nextSlide;
 
-//ModalContainer
+//ModalContainer Recherche
+const modalContainer2 = document.querySelector(".modal-container2");
+const modalTriggers2 = document.querySelectorAll(".modal-trigger2");
+
+modalTriggers2.forEach(trigger =>
+    trigger.addEventListener("click", () => {
+        modalContainer2.classList.toggle("active");
+    })
+);
+//ModalContainer Devis
 const modalContainer = document.querySelector(".modal-container");
 const modalTriggers = document.querySelectorAll(".modal-trigger");
 
