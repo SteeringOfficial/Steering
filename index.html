@@ -1,330 +1,308 @@
-<!DOCTYPE html> 
-<html>
-    <head>
-        <title>STEERING</title>
-        <!--Spécial Caractère-->
-        <meta charset="utf-8">
-        <!--Responsive-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--CSS-->
-        <link rel="stylesheet" href="styles.css">
-        <!--Icon-->
-        <link rel="apple-touch-icon" sizes="180x180" href="logo/favicon_package_v0.16/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon_package_v0.16/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="logo/favicon_package_v0.16/favicon-16x16.png">
-        <link rel="manifest" href="logo/favicon_package_v0.16/site.webmanifest">
-        <link rel="mask-icon" href="logo/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
-    </head>
-    <body>
-        <!--HEAD BAR-->
-        <div id="headbar">
-            <a href="index.html"><img id="logo1" src="logo/SteeringWhite.png" alt="logo"></a>
-            <a href="index.html"><img id="logoA1" src="logo/Steering-S-white-1000px-circle.png" alt="logo"></a>
-            <div id="lien">
-                <div id="lien_menu">
-                    <a href="#contact">nous contacter</a>
-                    <a href="#" class="btn-info modal-trigger">Modalitée de paiement</a>
-                    <a href="#">qui somme nous?</a>
-                </div>
-            </div>
-            <div id="responsive">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>STEERING</title>
+    <!--Spécial Caractère-->
+    <meta charset="utf-8">
+    <!--Responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+     <!--Icon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="logo/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="logo/favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="logo/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <!--HeadBar-->
+    <div id="headbar">
+        <!--Menu-->
+        <div id="responsive">
                 <button id="logo-menu">
-                    <img src="logo/menu.png" alt="menu" id="img_logo_menu">
+                    <img src="logo/Options.png" alt="menu" id="img_logo_menu">
                 </button>
                 <div id="lien_menu_responsive">
                     <nav>
                         <ul>
-                            <li><a href="#contact">Nous contacter</a></li>
-                            <li><a href="#" class="btn-info modal-trigger">Modalitée de paiement</a></li>
-                            <li><a href="#">Qui sommes-nous ?</a></li>
+                            <li><a href="#" class="btn-info modal-trigger">Il est temps de changé!</a></li>
+                            <li><a href="#" class="btn-info modal-trigger2">Nous trouvons votre vehicule!</a></li>
+                            <li><a href="#">Qui Somme nous?</a></li>
                         </ul>
                     </nav>
                 </div>
-            </div>            
-            <p id="head_devis"><a href="#" class="btn-info modal-trigger2">On trouve pour vous!</a></p>
-        </div>
-        <br><br><br>
+            </div>
+        <!--Logo-->
+        <a href="index.html" id="headlogo"><img src="logo/SteeringBlack.png" alt="logo"></a>
+        <a href="index.html" id="headlogo2"><img src="logo/Steering-S-white-1000px-circle.png" alt="logo"></a>
+    </div>
+    <br><br><br><br>
 
-        <!--CORPS-->
-        <!--Montage VOD de Steering-->
-        <div id="vod">
-            <div class="video-wrapper">
-              <video id="vods" src="ph/STEERING/STEERING-VOD_0.mp4" preload="metadata"></video>
-              <div class="custom-controls">
-                <button id="playPauseButton" onclick="togglePlayPause()">▶</button>
-                <button id="muteBtn" onclick="toggleMute()">🔇</button>
-                <button id="fullscreenBtn" onclick="toggleFullscreen()">⛶</button>
-              </div>
-              <div id="progressContainer" onclick="seekVideo(event)">
-                <div id="progressBar"></div>
-              </div>
+    <!--BodyPage-->
+    <img src="logo/Steering-S-white-1000px-circle.png" alt="" id="fond_img">
+    <!--Montage VOD de Steering-->
+    <div id="vod">
+        <div class="video-wrapper">
+            <video id="vods" src="ph/STEERING/STEERING-VOD_0.mp4" preload="metadata"></video>
+            <div class="custom-controls">
+            <button id="playPauseButton" onclick="togglePlayPause()">▶</button>
+            <button id="muteBtn" onclick="toggleMute()">🔇</button>
+            <button id="fullscreenBtn" onclick="toggleFullscreen()">⛶</button>
+            </div>
+            <div id="progressContainer" onclick="seekVideo(event)">
+            <div id="progressBar"></div>
             </div>
         </div>
+    </div>
 
-        <!--TEXT ACROCHE-->
+    <!--SHOP BUTTON-->
+    <div id="btn-stock-cell">
+        <button id="btn-stock" type="button" onclick="showSection('vente')">En Stock</button>
+        <button id="btn-cell" type="button" onclick="showSection('vendu')">Vendus</button>
+    </div>
+
+    <!--SHOP-->
+    <div id="shop">
+        <!--EN VENTE-->
+        <div id="vente">
+            <!--CADRE VEHICULES-->
+            <div class="cadrevehicules">
+                <!--Cadre00-->
+                <div id="cadre00">
+                    <!--CadreImage-->
+                    <div class="cadreimage">
+                        <div class="slider00">
+                            <div class="slides00">
+                                <img src="ph/STEERING/1.png" class="image" class="slide00" alt="img1">
+                                <img src="ph/STEERING/2.png" class="image" class="slide00" alt="img2">
+                            </div>
+                            <button class="prev00" onclick="prevSlide00()">&#10094</button>
+                            <button class="next00" onclick="nextSlide00()">&#10095</button>
+                        </div>
+                    </div>
+                    <!--CadreInfo-->
+                    <div class="cadreinfo">
+                        <div class="textinfo">
+                            <p class="info">Marque</p>
+                            <p class="info">Modèle</p>
+                            <p class="info">Année</p>
+                            <p class="info">Kilomètrage</p>
+                            <p class="info">Puissance</p>
+                            <p class="info">Boite</p>
+                            <p class="info">Energie</p>
+                            <p class="info"><a href="#" id="prix00" class="btn-info modal-trigger">3.000€</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!--Cadre01-->
+                <div id="cadre01">
+                    <!--CadreImage-->
+                    <div class="cadreimage">
+                        <div class="slider01">
+                            <div class="slides01">
+                                <img src="ph/STEERING/1.png" class="image" class="slide01" alt="img1">
+                                <img src="ph/STEERING/2.png" class="image" class="slide01" alt="img2">
+                            </div>
+                            <button class="prev01" onclick="prevSlide01()">&#10094</button>
+                            <button class="next01" onclick="nextSlide01()">&#10095</button>
+                        </div>
+                    </div>
+                    <!--CadreInfo-->
+                    <div class="cadreinfo">
+                        <div class="textinfo">
+                            <p class="info">Marque</p>
+                            <p class="info">Modèle</p>
+                            <p class="info">Année</p>
+                            <p class="info">Kilomètrage</p>
+                            <p class="info">Puissance</p>
+                            <p class="info">Boite</p>
+                            <p class="info">Energie</p>
+                            <p class="info"><a href="#" id="prix01" class="btn-info modal-trigger">3.000€</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!--Cadre02-->
+                <div id="cadre02">
+                    <!--CadreImage-->
+                    <div class="cadreimage">
+                        <div class="slider02">
+                            <div class="slides02">
+                                <img src="ph/STEERING/1.png" class="image" class="slide02" alt="img1">
+                                <img src="ph/STEERING/2.png" class="image" class="slide02" alt="img2">
+                            </div>
+                            <button class="prev02" onclick="prevSlide02()">&#10094</button>
+                            <button class="next02" onclick="nextSlide02()">&#10095</button>
+                        </div>
+                    </div>
+                    <!--CadreInfo-->
+                    <div class="cadreinfo">
+                        <div class="textinfo">
+                            <p class="info">Marque</p>
+                            <p class="info">Modèle</p>
+                            <p class="info">Année</p>
+                            <p class="info">Kilomètrage</p>
+                            <p class="info">Puissance</p>
+                            <p class="info">Boite</p>
+                            <p class="info">Energie</p>
+                            <p class="info"><a href="#" id="prix02" class="btn-info modal-trigger">3.000€</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--VENDU-->
+        <div id="vendu" style="display: none;">
+            <!--CADRE VEHICULES-->
+            <div class="cadrevehicules">
+                <!--Cadre0-->
+                <div id="cadre0">
+                    <!--CadreImage-->
+                    <div class="cadreimage">
+                        <div class="slider0">
+                            <div class="slides0">
+                                <img src="ph/Citroen-14-06-24/1.webp" class="image" class="slide0" alt="img1">
+                                <img src="ph/Citroen-14-06-24/2.webp" class="image" class="slide0" alt="img2">
+                                <img src="ph/Citroen-14-06-24/3.webp" class="image" class="slide0" alt="img3">
+                                <img src="ph/Citroen-14-06-24/4.webp" class="image" class="slide0" alt="img4">
+                                <img src="ph/Citroen-14-06-24/5.webp" class="image" class="slide0" alt="img5">
+                            </div>
+                            <button class="prev0" onclick="prevSlide0()">&#10094</button>
+                            <button class="next0" onclick="nextSlide0()">&#10095</button>
+                        </div>
+                    </div>
+                    <!--CadreInfo-->
+                    <div class="cadreinfo">
+                        <div class="textinfo">
+                            <p class="info">Marque: <strong>Citroën</strong></p>
+                            <p class="info">Modèle: <strong>Xsara 1.8i 16v</strong></p>
+                            <p class="info">Année: <strong>2004</strong></p>
+                            <p class="info">Killométrage: <strong>145.000</strong></p>
+                            <p class="info">Puissance: <strong>110Ch</strong></p>
+                            <p class="info">Boite: <strong>Manuelle</strong></p>
+                            <p class="info">Energie: <strong>Essence</strong></p>
+                            <p class="info"><strong>VENDU</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <!--Cadre1-->
+                <div id="cadre1">
+                    <!--CadreImage-->
+                    <div class="cadreimage">
+                        <div class="slider1">
+                            <div class="slides1">
+                                <img src="ph/Ford-04-07-24/111.webp" class="image" class="slide1" alt="img1">
+                                <img src="ph/Ford-04-07-24/222.webp" class="image" class="slide1" alt="img2">
+                                <img src="ph/Ford-04-07-24/333.webp" class="image" class="slide1" alt="img3">
+                                <img src="ph/Ford-04-07-24/444.webp" class="image" class="slide1" alt="img4">
+                                <img src="ph/Ford-04-07-24/555.webp" class="image" class="slide1" alt="img5">
+                            </div>
+                            <button class="prev1" onclick="prevSlide1()">&#10094</button>
+                            <button class="next1" onclick="nextSlide1()">&#10095</button>
+                        </div>
+                    </div>
+                    <!--CadreInfo-->
+                    <div class="cadreinfo">
+                        <div class="textinfo">
+                            <p class="info">Ford</p>
+                            <p class="info">Fiesta Odyssée 1.8 tddi 8v turbo</p>
+                            <p class="info">2001</p>
+                            <p class="info">210.200 Km</p>
+                            <p class="info">75 Ch</p>
+                            <p class="info">Manuelle</p>
+                            <p class="info">Diesel</p>
+                            <p class="info"><strong>VENDU</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <!--Cadre2-->
+                <div id="cadre2">
+                    <!--CadreImage-->
+                    <div class="cadreimage">
+                        <div class="slider2">
+                            <div class="slides2">
+                                <img src="ph/STEERING/1.png" class="image" class="slide2" alt="img1">
+                                <img src="ph/STEERING/2.png" class="image" class="slide2" alt="img2">
+                            </div>
+                            <button class="prev2" onclick="prevSlide2()">&#10094</button>
+                            <button class="next2" onclick="nextSlide2()">&#10095</button>
+                        </div>
+                    </div>
+                    <!--CadreInfo-->
+                    <div class="cadreinfo">
+                        <div class="textinfo">
+                            <p class="info">Marque</p>
+                            <p class="info">Modèle</p>
+                            <p class="info">Année</p>
+                            <p class="info">Kilomètrage</p>
+                            <p class="info">Puissance</p>
+                            <p class="info">Boite</p>
+                            <p class="info">Energie</p>
+                            <p class="info">VENDU</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--PartSupp-->
+     <div id="partsupp">
         <div id="text_acroche">
-            <p id="text_acroche1"><strong>STEERING</strong> : Des véhicules d'occasion <strong>d'exception</strong>.</p>
-            <p id="text_acroche2">Chaque véhicule bénéficie d'un <strong>nettoyage complet</strong> avant la vente.</p>
+            <p><strong>STEERING</strong> : Des <strong>véhicules</strong> d'occasion <strong>d'exception</strong>!</p>
+            <p>Chaque véhicule bénéficie d'un <strong>nettoyage complet</strong> avant ça vente!</p>
         </div>
+     </div>
 
-        <!--SHOP BUTTON-->
-        <div id="btn-stock-cell">
-            <button id="btn-stock" type="button" onclick="showSection('vente')">En Stock</button>
-            <button id="btn-cell" type="button" onclick="showSection('vendu')">Vendus</button>
-        </div>
-
-        <!--SHOP-->
-        <div id="shop">
-            <!--EN VENTE-->
-            <div id="vente">
-                <div id="case0">
-                    <div class="slider0">
-                        <div class="slides0">
-                            <img src="ph/STEERING/1.png" class="slide0" alt="img1">
-                            <img src="ph/STEERING/2.png" class="slide0" alt="img2">
-                        </div>
-                        <button class="prev0" onclick="prevSlide0()">&#10094</button>
-                        <button class="next0" onclick="nextSlide0()">&#10095</button>
-                    </div>
-                    <div id="description0">
-                        <div class="top0">
-                            <p>Bientôt Disponible</p>
-                        </div>
-                        <div class="logo10">
-                            <img src="logo/Steering-S-white-1000px-circle.png" alt="logo">
-                        </div>
-                        <div class="mid10">
-                            <p class="para11">marque:</p>
-                            <p class="para12">version:</p>
-                            <p class="para13">kilométrage:</p>
-                            <p class="para14">années:</p>
-                            <p class="para15">chevaux:</p>
-                            <p class="para16">couleur exterieure:</p>
-                            <p class="para17">couleur intérieure:</p>
-                            <p class="para18">transmission:</p>
-                            <p class="para19">carburant:</p>
-                        </div>
-                        <div class="mid20">
-                            <p class="para21">.....</p>
-                            <p class="para22">.....</p>
-                            <p class="para23">.....</p>
-                            <p class="para24">.....</p>
-                            <p class="para25">.....</p>
-                            <p class="para26">.....</p>
-                            <p class="para27">.....</p>
-                            <p class="para28">.....</p>
-                            <p class="para29">.....</p>
-                        </div>
-                        <div class="infoprice">
-                            <button id="devis_partie1" class="btn-info modal-trigger" type="button" >10 000€</button>
-                        </div>
-                    </div>
-                </div>
-                <div id="case01">
-                    <div class="slider01">
-                        <div class="slides01">
-                            <img src="ph/STEERING/1.png" class="slide01" alt="img1">
-                            <img src="ph/STEERING/2.png" class="slide01" alt="img2">
-                        </div>
-                        <button class="prev01" onclick="prevSlide01()">&#10094</button>
-                        <button class="next01" onclick="nextSlide01()">&#10095</button>
-                    </div>
-                    <div id="description01">
-                        <div class="top01">
-                            <p>Bientôt Disponible</p>
-                        </div>
-                        <div class="logo10">
-                            <img src="logo/Steering-S-white-1000px-circle.png" alt="logo">
-                        </div>
-                        <div class="mid101">
-                            <p class="para11">marque:</p>
-                            <p class="para12">version:</p>
-                            <p class="para13">kilométrage:</p>
-                            <p class="para14">années:</p>
-                            <p class="para15">chevaux:</p>
-                            <p class="para16">couleur exterieure:</p>
-                            <p class="para17">couleur intérieure:</p>
-                            <p class="para18">transmission:</p>
-                            <p class="para19">carburant:</p>
-                        </div>
-                        <div class="mid201">
-                            <p class="para21">.....</p>
-                            <p class="para22">.....</p>
-                            <p class="para23">.....</p>
-                            <p class="para24">.....</p>
-                            <p class="para25">.....</p>
-                            <p class="para26">.....</p>
-                            <p class="para27">.....</p>
-                            <p class="para28">.....</p>
-                            <p class="para29">.....</p>
-                        </div>
-                        <div class="infoprice">
-                            <button id="devis_partie11" class="btn-info modal-trigger" type="button" >10 000€</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!--VENDU-->
-            <div id="vendu" style="display: none;">
-                <div id="case1">
-                    <div class="slider1">
-                        <div class="slides1">
-                            <img src="ph/Ford-04-07-24/111.webp" class="slide1" alt="img1">
-                            <img src="ph/Ford-04-07-24/222.webp" class="slide1" alt="img2">
-                            <img src="ph/Ford-04-07-24/333.webp" class="slide1" alt="img3">
-                            <img src="ph/Ford-04-07-24/444.webp" class="slide1" alt="img4">
-                            <img src="ph/Ford-04-07-24/555.webp" class="slide1" alt="img5">
-                        </div>
-                        <button class="prev1" onclick="prevSlide1()">&#10094</button>
-                        <button class="next1" onclick="nextSlide1()">&#10095</button>
-                    </div>
-                    <div id="description1">
-                        <div class="top1">
-                            <p>ford</p>
-                        </div>
-                        <div class="logo11">
-                            <img src="logo/Steering-S-white-1000px-circle.png" alt="logo">
-                        </div>
-                        <div class="mid11">
-                            <p class="para11">marque:</p>
-                            <p class="para12">version:</p>
-                            <p class="para13">kilométrage:</p>
-                            <p class="para14">années:</p>
-                            <p class="para15">chevaux:</p>
-                            <p class="para16">couleur exterieure:</p>
-                            <p class="para17">couleur intérieure:</p>
-                            <p class="para18">transmission:</p>
-                            <p class="para19">carburant:</p>
-                        </div>
-                        <div class="mid21">
-                            <p class="para21">ford</p>
-                            <p class="para22">fiesta odyssée 1.8 tddi 8v turbo</p>
-                            <p class="para23">210 200</p>
-                            <p class="para24">2001</p>
-                            <p class="para25">75</p>
-                            <p class="para26">gris claire</p>
-                            <p class="para27">gris foncé</p>
-                            <p class="para28">manuelle</p>
-                            <p class="para29">diesel</p>
-                        </div>
-                        <div class="price1">
-                            <p class="prix1">VENDU</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="case2">
-                    <div class="slider2">
-                        <div class="slides2">
-                            <img src="ph/Citroen-14-06-24/1.webp" class="slide2" alt="img1">
-                            <img src="ph/Citroen-14-06-24/2.webp" class="slide2" alt="img2">
-                            <img src="ph/Citroen-14-06-24/3.webp" class="slide2" alt="img3">
-                            <img src="ph/Citroen-14-06-24/4.webp" class="slide2" alt="img4">
-                            <img src="ph/Citroen-14-06-24/5.webp" class="slide2" alt="img5">
-                        </div>
-                        <button class="prev2" onclick="prevSlide2()">&#10094</button>
-                        <button class="next2" onclick="nextSlide2()">&#10095</button>
-                    </div>
-                    <div id="description2">
-                        <div class="top2">
-                            <p>citroën</p>
-                        </div>
-                        <div class="logo12">
-                            <img src="logo/Steering-S-white-1000px-circle.png" alt="logo">
-                        </div>
-                        <div class="mid12">
-                            <p class="para11">marque:</p>
-                            <p class="para12">version:</p>
-                            <p class="para13">kilométrage:</p>
-                            <p class="para14">années:</p>
-                            <p class="para15">chevaux:</p>
-                            <p class="para16">couleur exterieure:</p>
-                            <p class="para17">couleur intérieure:</p>
-                            <p class="para18">transmission:</p>
-                            <p class="para19">carburant:</p>
-                        </div>
-                        <div class="mid22">
-                            <p class="para21">citroën</p>
-                            <p class="para22">xsara 1.8i 16v</p>
-                            <p class="para23">145 000</p>
-                            <p class="para24">2004</p>
-                            <p class="para25">110</p>
-                            <p class="para26">gris</p>
-                            <p class="para27">gris foncé</p>
-                            <p class="para28">manuelle</p>
-                            <p class="para29">essence</p>
-                        </div>
-                        <div class="price2">
-                            <p class="prix2">VENDU</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
-    <!--Modal pour Recherche-->
-    <div class="modal-container2">
-        <div class="overlay modal-trigger2"></div>
-        <div class="modal" role="dialog" aria-labelledby="modalTitle2" aria-describedby="dialogDesc2">
-            <button aria-label="close-modal" class="close-modal2 modal-trigger2">X</button>
-            <h1 id="modalTitle2">Envie d'un véhicule en particulier?</h1>
-            <div id="text">
-                <p id="p1">
-                    Notre équipe trouve pour vous, votre vehicule!
-                </p>
-                <p id="p2">
-                    Informations Nécessaire:
-                </p>
-                <p id="p3">
-                    - Marque, Modèle, Configuration Extèrieure/Intèrieure
-                </p>
-                <p id="p4">
-                    Une fois le vehicule trouvé, il vous seras présenté sous format photo et vidéo si possible.
-                </p>
-                <p id="p5">
-                    Le paiement intégrale est nécessaire avant la remise de votre bien.
-                </p>
-            </div>
-            <a href="mailto:steering.official@gmail.com"><button id="copie">E-mail</button></a>
-            <p id="dialogDesc2">Ou <br> Contacter-nous directement par téléphone<br><a href="tel:0680001935">06.80.00.19.35</a></p>
-        </div>
+    <!--EndBar-->
+    <div id="endbar">
+        <p id="copyright">© 2025 STEERING. Tous droits réservés</p>
+        <!--Phone-->
+        <a href="tel:0680001935" id="phone">06.80.00.19.35</a>
+        <!--Logo-->
+        <a href="index.html" id="endlogo"><img src="logo/SteeringBlack.png" alt="logo"></a>
+        <!--Mail-->
+        <a href="mailto:info@steering.com" id="mail">steering.official@gmail.com</a>
     </div>
-    <!--Modal pour Devis-->
-    <div class="modal-container">
-        <div class="overlay modal-trigger"></div>
-        <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="dialogDesc">
-            <button aria-label="close-modal" class="close-modal modal-trigger">X</button>
-            <h1 id="modalTitle">Voulez-vous une voituire pour votre quotidien?</h1>
-            <div id="text">
-                <p id="question1">
-                    Papiers nécessaires:
-                </p>
-                <p id="question2">
-                    - Carte d'idendité
-                </p>
-                <p id="question3">
-                    - Permis de conduire
-                </p>
-                <p id="question4">
-                    - Certificat de Domicile
-                </p>
-                <p id="question5">
-                    Paiement en 2 ou 3 fois sans frait, après étude de votre dossier. Pour plus d'info contactez nous directement par mail ou téléphone.
-                </p>
-            </div>
-            <a href="mailto:steering.official@gmail.com"><button id="copie">E-mail</button></a>
-            <p id="dialogDesc">Ou <br> Contacter-nous directement par téléphone<br><a href="tel:0680001935">06.80.00.19.35</a></p>
+</body>
+<!--MODAL-->
+<!--Modal pour Recherche-->
+<div class="modal-container2">
+    <div class="overlay modal-trigger2"></div>
+    <div class="modal" role="dialog" aria-labelledby="modalTitle2" aria-describedby="dialogDesc2">
+        <button aria-label="close-modal" class="close-modal2 modal-trigger2">X</button>
+        <h1 id="modalTitle2">Envie d'un véhicule en particulier?</h1>
+        <div id="text">
+            <p id="p1">Notre équipe trouve pour vous, votre vehicule!</p>
+            <p id="p2">Informations Nécessaire:</p>
+            <p id="p3">- Marque, Modèle, Configuration Extèrieure/Intèrieure</p>
+            <p id="p4">Une fois le vehicule trouvé, il vous seras présenté sous format photo et vidéo si possible.</p>
+            <p id="p5">Le paiement intégrale est nécessaire avant la remise de votre bien.</p>
         </div>
+        <a href="mailto:steering.official@gmail.com"><button id="copie">E-mail</button></a>
+        <p id="dialogDesc2">Ou <br> Contacter-nous directement par téléphone<br><a href="tel:0680001935">06.80.00.19.35</a></p>
     </div>
-    <!--FOOTER-->
-    <footer id="contact">
-        <p class="copyright">© 2025 STEERING. Tous droits réservés</p>
-        <p class="e-mail"><img id="e-mail" src="logo/e-mail.png" alt="e-mail"><a href="mailto:info@steering.com" class="lienmail">steering.official@gmail.com</a></p>
-        <p id="tel"><img id="telephone" src="logo/téléphone.png" alt="telephone"><a href="tel:0680001935" id="lientel">06.80.00.19.35</a></p>
-    </footer>
-    <!--JavaScript-->
-    <script src="script.js"></script>
+</div>
+<!--Modal pour Devis-->
+<div class="modal-container">
+    <div class="overlay modal-trigger"></div>
+    <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="dialogDesc">
+        <button aria-label="close-modal" class="close-modal modal-trigger">X</button>
+        <h1 id="modalTitle">Voulez-vous une voituire pour votre quotidien?</h1>
+        <div id="text">
+            <p id="question1">Papiers nécessaires:</p>
+            <p id="question2">- Carte d'idendité</p>
+            <p id="question3">- Permis de conduire</p>
+            <p id="question4">- Certificat de Domicile</p>
+            <p id="question5">Paiement en 2 ou 3 fois sans frait, après étude de votre dossier. Pour plus d'info contactez nous directement par mail ou téléphone.</p>
+        </div>
+        <a href="mailto:steering.official@gmail.com"><button id="copie">E-mail</button></a>
+        <p id="dialogDesc">Ou <br> Contacter-nous directement par téléphone<br><a href="tel:0680001935">06.80.00.19.35</a></p>
+    </div>
+</div>
+<!--JavaScript-->
+<script src="script.js"></script>
 </html>
